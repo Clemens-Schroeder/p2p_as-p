@@ -1,10 +1,5 @@
 import React, {useState} from 'react';
 
-interface Player {
-    id: string,
-    name: string,
-}
-
 export default function Admin() {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
