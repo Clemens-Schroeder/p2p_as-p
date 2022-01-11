@@ -26,9 +26,6 @@ export default function Admin() {
                 method: "POST",
                 body: JSON.stringify(articleEntry)
             })
-            .catch(function(res){
-                setMessage(`Unable to add article ${name}`);
-            })
     }
 
     return <>
