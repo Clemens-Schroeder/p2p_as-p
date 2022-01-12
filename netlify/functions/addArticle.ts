@@ -15,8 +15,8 @@ const handler: Handler = async (event, context) => {
     const newArticle = JSON.parse(event.body) as ArticleEntry;
     await prisma.articles.create({
       data: {
-        name: String(newArticle.name),
-        description: String(newArticle.description),
+        name: newArticle.name,
+        description: newArticle.description,
         price: parseInt(newArticle.price)
       },
     });
