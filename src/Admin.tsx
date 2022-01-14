@@ -4,12 +4,14 @@ export default function Admin() {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
+    const [message, setMessage] = useState("");
 
     const addArticle = () => {
         const articleEntry = {
             name: name,
             description: description,
             price: price
+            message: message
         }
 
         fetch("/.netlify/functions/addArticle",
@@ -21,6 +23,12 @@ export default function Admin() {
                 method: "POST",
                 body: JSON.stringify(articleEntry)
             })
+        .then(function(res){
+            setMessage(`Söccess`);
+        })
+        .catch(function(res){
+            setMessage(`Failöre`);
+        })    
     }
 
     return <>
