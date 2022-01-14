@@ -10,8 +10,8 @@ export default function Admin() {
         const articleEntry = {
             name: name,
             description: description,
-            price: price
-            message: message
+            price: price,
+            message: message,
         }
 
         fetch("/.netlify/functions/addArticle",
