@@ -64,5 +64,6 @@ export default function Admin() {
             </div>
             </>
         }
+        <div className="admin-message">{message}</div>
     </>
 }
